@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Permanent+Marker&display=swap');
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(latar.webp);
+
+}
+
+header,nav {
+  margin: 0;
+  padding-bottom: 0px;
+  padding: 0;
+  width: 100%;
+  height: 75px;
+  background: linear-gradient( to left,rgb(36, 67, 133),rgb(39, 249, 224));
+  position: sticky;
+  >ul {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      list-style:none;
+      justify-content: space-between;
+      align-items: center;
+
+
+      >li a{
+          text-decoration: none;
+          color: azure;
+          font-size: 18px;
+          font-family: sans-serif;
+          font-weight: bold;
+      }
+  }
+}
+.nav-1,
+.nav-2{
+  flex:1;
+  text-align: center;
+}
+
+.nav-1{
+  flex: 6;
+  text-align: left;
+  margin-left: 10px;
+  
+}
+
+.nav-1 a{
+  > img{
+      margin-top: 7px;
+      width: 60px;
+  }
+}
+
+
+
+.main-list{
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* display: grid;
+    grid-template-columns: repeat(3,2fr); */
+    >figure{
+        background: linear-gradient(to left,rgb(109, 36, 133),rgb(39, 165, 249));
+        border-radius: 10px;
+        border: 5px;
+        padding: 10px;
+        
+        >img{
+            width: 200px;
+        }
+        >figcaption > p{
+            text-align: center;
+            font-size:10px;
+            color: azure;
+            font-size: x-large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           
+        }
+    }
+}
+
+figure:hover{
+    cursor: pointer;
+    transform:scale(0.9);
+    background: linear-gradient(to left,rgb(171, 3, 255),rgb(0, 32, 239));
+    transition: 1s;
+}
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:linear-gradient(to left,rgb(2, 8, 95),rgb(16, 203, 255));
+    opacity: 0.7;
+    
+  }
+
+  .modal {
+    width: 500px;
+    height: 500px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:linear-gradient(to right,rgb(11, 1, 194),rgb(16, 203, 255));
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    cursor: pointer;
+  }
+  
+
+  .modal-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .modal-content{
+    > p {
+      margin-bottom: 20px;
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+      font-family:'Montserrat', sans-serif ;
+  }
+  >a{
+    text-decoration: none;
+    color: rgb(57, 62, 59);
+    font-size: 18px;
+    font-family: 'Monserrat',sans-serif;
+    background-color: aqua;
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 10px;
+  }
+  >a:hover{
+    transition: 1s;
+    background-color: rgb(6, 48, 153);
+    color: aliceblue;
+  }
+}
+
+@media screen and (max-width:280px) {
+
+  header,nav{
+    width: 100%;
+    height: 65px;
+    
+  }
+  nav ul li{
+    justify-content: space-between;
+  }
+
+  nav ul li a{
+    padding: 10px;
+    font-size: 8px;
+  }
+
+  .nav-1 a{
+    > img{
+        margin-top: 7px;
+        width: 40px;
+    }
+  }
+
+ .main-list figure img{
+  width: 40px;
+ }
+
+ .modal{
+  width: 200px;
+  height: 310px;
+  padding: 30px;
+ }
+
+ .modal-image{
+  width: 100%;
+  height: 100px;
+ }
+
+ .modal-content{
+  height: 250px;
+  >p{
+    font-size: 10px;
+    
+  }
+  >a{
+    position: relative;
+    top: 15%;
+    font-size: 12px;
+  }
+ }
+
+}
+
+@media screen and (max-width:320px) and (min-width:280) {
+
+  header,nav{
+    width: 100%;
+    height: 65px;
+    
+  }
+  nav ul li{
+    justify-content: space-between;
+  }
+
+  nav ul li a{
+    padding: 10px;
+    font-size: 8px;
+  }
+
+  .nav-1 a{
+    > img{
+        margin-top: 7px;
+        width: 40px;
+    }
+  }
+
+ .main-list figure img{
+  width: 40px;
+ }
+
+ .modal{
+  width: 200px;
+  height: 310px;
+  padding: 30px;
+ }
+
+ .modal-image{
+  width: 100%;
+  height: 100px;
+ }
+
+ .modal-content{
+  height: 250px;
+  >p{
+    font-size: 10px;
+    
+  }
+  >a{
+    position: relative;
+    top: 15%;
+    font-size: 12px;
+  }
+ }
+
+}
+
+@media screen and (max-width:380px) and (min-width:321px) {
+
+    header,nav{
+      width: 100%;
+      height: 75px;
+      
+    }
+    nav ul li{
+      justify-content: space-between;
+    }
+
+    nav ul li a{
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    .nav-1 a{
+      > img{
+          margin-top: 7px;
+          width: 50px;
+      }
+    }
+
+   .main-list figure img{
+    width: 80px;
+   }
+
+   .modal{
+    width: 200px;
+    height: 320px;
+    padding: 30px;
+   }
+
+   .modal-image{
+    width: 100%;
+    height: 150px;
+   }
+
+   .modal-content{
+    height: 250px;
+    >p{
+      font-size: 10px;
+      
+    }
+    >a{
+      position: relative;
+      top: 15%;
+      font-size: 12px;
+    }
+   }
+
+}
+
+@media screen and (max-width:480px) and (min-width:381px) {
+
+  header,nav{
+    width: 100%;
+    height: 75px;
+    
+  }
+  nav ul li{
+    justify-content: space-between;
+  }
+
+  nav ul li a{
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .nav-1 a{
+    > img{
+        margin-top: 7px;
+        width: 60px;
+    }
+  }
+
+ .main-list figure img{
+  width: 100px;
+ }
+
+ .modal{
+  width: 300px;
+  height: 400px;
+  padding: 30px;
+ }
+
+ .modal-image{
+  width: 100%;
+  height: 200px;
+ }
+
+ .modal-content{
+  height: 300px;
+  >p{
+    font-size: 14px;
+    
+  }
+  >a{
+    position: relative;
+    top: 15%;
+    font-size: 12px;
+  }
+ }
+
+}
+
+
+@media screen and (max-width: 768px) and (min-width:481px){
+
+  header,nav{
+    width: 100%;
+    height: 75px;
+    
+  }
+  nav ul li{
+    justify-content: space-between;
+  }
+
+  nav ul li a{
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .nav-1 a{
+    > img{
+        margin-top: 7px;
+        width: 60px;
+    }
+  }
+
+ .main-list figure img{
+  width: 150px;
+ }
+
+ .modal{
+  width: 300px;
+  height: 450px;
+  padding: 20px;
+ }
+
+ .modal-image{
+  width: 100%;
+  height: 250px;
+ }
+
+ .modal-content{
+  height: 400px;
+  >p{
+    font-size: 14px;
+    
+  }
+  >a{
+    position: relative;
+    top: 10%;
+    font-size: 16px;
+  }
+ }
+
+}
+
+@media screen and (max-width:1024px) and (min-width:769px) {
+
+  header,nav{
+    width: 100%;
+    height: 75px;
+    
+  }
+  nav ul li{
+    justify-content: space-between;
+  }
+
+  nav ul li a{
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .nav-1 a{
+    > img{
+        margin-top: 7px;
+        width: 60px;
+    }
+  }
+
+ .main-list figure img{
+  width: 200px;
+ }
+
+ .modal{
+  width: 400px;
+  height: 500px;
+  padding: 40px;
+ }
+
+ .modal-image{
+  width: 100%;
+  height: 250px;
+ }
+
+ .modal-content{
+  height: 500px;
+  >p{
+    font-size: 20px;
+    
+  }
+  >a{
+    position: relative;
+    top: 12%;
+    font-size: 20px;
+  }
+ }
+
+}
+
+
+@media screen and (max-width:1440px) and (min-width:1025px) {
+
+  header,nav{
+    width: 100%;
+    height: 75px;
+    
+  }
+  nav ul li{
+    justify-content: space-between;
+  }
+
+  nav ul li a{
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .nav-1 a{
+    > img{
+        margin-top: 7px;
+        width: 60px;
+    }
+  }
+
+ .main-list figure img{
+  width: 300px;
+ }
+
+ .modal{
+  width: 500px;
+  height: 600px;
+  padding: 40px;
+ }
+
+ .modal-image{
+  width: 100%;
+  height: 300px;
+ }
+
+ .modal-content{
+  height: 550px;
+  >p{
+    font-size: 20px;
+    
+  }
+  >a{
+    position: relative;
+    top: 15%;
+    font-size: 20px;
+  }
+ }
+
+}
+
+
+
+
+
+
+
